@@ -22,6 +22,9 @@
         <!-- Mysql驱动 -->
         <db.driver.mysql.version>5.1.48</db.driver.mysql.version>
 
+        <!-- redisson -->
+        <org.redisson.version>3.12.4</org.redisson.version>
+
         <hutool.version>5.7.19</hutool.version>
         <lombok.version>1.18.8</lombok.version>
 
@@ -81,6 +84,12 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${org.redisson.version}</version>
             </dependency>
 
             <dependency>

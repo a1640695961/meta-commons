@@ -11,6 +11,7 @@
     <modules>
         <module>meta-dependencies</module>
         <module>meta-commons-lang</module>
+        <module>meta-redisson-starter</module>
     </modules>
 
 
