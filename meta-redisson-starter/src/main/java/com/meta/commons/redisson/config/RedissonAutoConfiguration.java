@@ -1,4 +1,4 @@
-package com.meta.redisson.config;
+package com.meta.commons.redisson.config;
 
 
 import org.redisson.Redisson;

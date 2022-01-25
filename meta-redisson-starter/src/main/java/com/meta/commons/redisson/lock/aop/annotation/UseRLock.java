@@ -1,4 +1,4 @@
-package com.meta.redisson.lock.aop.annotation;
+package com.meta.commons.redisson.lock.aop.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

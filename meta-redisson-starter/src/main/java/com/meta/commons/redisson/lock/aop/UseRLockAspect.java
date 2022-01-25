@@ -1,7 +1,7 @@
-package com.meta.redisson.lock.aop;
+package com.meta.commons.redisson.lock.aop;
 
-import com.meta.redisson.lock.aop.annotation.LockKey;
-import com.meta.redisson.lock.aop.annotation.UseRLock;
+import com.meta.commons.redisson.lock.aop.annotation.LockKey;
+import com.meta.commons.redisson.lock.aop.annotation.UseRLock;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -40,7 +40,7 @@ public class UseRLockAspect {
     private RedissonClient redissonClient;
 
 
-    @AfterThrowing(value = "@annotation(com.meta.redisson.lock.aop.annotation.UseRLock)", throwing = "e")
+    @AfterThrowing(value = "@annotation(com.meta.commons.redisson.lock.aop.annotation.UseRLock)", throwing = "e")
     public void AfterThrowing(JoinPoint joinPoint, Exception e) throws Throwable {
         if (!TransactionSynchronizationManager.isSynchronizationActive()) {
             unlock(joinPoint);
@@ -58,14 +58,14 @@ public class UseRLockAspect {
         }
     }
 
-    @Around(value = "@annotation(com.meta.redisson.lock.aop.annotation.UseRLock)")
+    @Around(value = "@annotation(com.meta.commons.redisson.lock.aop.annotation.UseRLock)")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         lock(joinPoint);
         return joinPoint.proceed();
     }
 
 
-    @AfterReturning(value = "@annotation(com.meta.redisson.lock.aop.annotation.UseRLock)")
+    @AfterReturning(value = "@annotation(com.meta.commons.redisson.lock.aop.annotation.UseRLock)")
     public void afterReturning(JoinPoint joinPoint) throws NoSuchMethodException {
         if (!TransactionSynchronizationManager.isSynchronizationActive()) {
             unlock(joinPoint);
