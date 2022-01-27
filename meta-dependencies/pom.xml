@@ -34,6 +34,23 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>com.meta</groupId>
+                <artifactId>meta-commons-core-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.meta</groupId>
+                <artifactId>meta-redisson-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.meta</groupId>
+                <artifactId>meta-commons-lang</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
+            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-parent</artifactId>
                 <version>${spring.boot.version}</version>
