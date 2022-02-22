@@ -29,7 +29,7 @@ import java.util.Objects;
 @ConditionalOnClass({Redisson.class, RedisOperations.class})
 @AutoConfigureAfter(RedisAutoConfiguration.class)
 @ComponentScan(basePackages = {
-        "com.meta.redisson.redisson.lock.aop"
+        "com.meta.commons.redisson.lock.aop"
 })
 public class RedissonAutoConfiguration {
     private static final Logger log = LoggerFactory.getLogger(RedissonAutoConfiguration.class);
