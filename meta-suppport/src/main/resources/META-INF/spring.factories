@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.meta.support.autoconfig.WebAutoConfiguration,\
+com.meta.support.autoconfig.ExceptionAutoConfiguration

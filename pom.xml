@@ -13,6 +13,7 @@
         <module>meta-commons-lang</module>
         <module>meta-redisson-starter</module>
         <module>meta-commons-core-model</module>
+        <module>meta-suppport</module>
     </modules>
     <distributionManagement>
         <repository>
