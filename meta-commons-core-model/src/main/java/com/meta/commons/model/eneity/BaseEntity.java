@@ -1,16 +1,53 @@
 package com.meta.commons.model.eneity;
 
 import com.meta.commons.model.IOperation;
+import com.meta.commons.model.ITimeEntity;
+
+import java.util.Date;
 
 /**
  * @author Xiong Mao
  * @date 2022/04/26 19:51
  **/
-public abstract class BaseEntity extends StringIdWithTime implements IOperation {
+public abstract class BaseEntity extends StringId implements IOperation, ITimeEntity {
 
-    private String createdBy;
+    protected Date createdAt;
 
-    private String updatedBy;
+    protected Date updatedAt;
+
+    protected String createdBy;
+
+    protected String updatedBy;
+
+    protected String remark;
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    @Override
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    @Override
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    @Override
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    @Override
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 
     @Override
     public String getCreatedBy() {
