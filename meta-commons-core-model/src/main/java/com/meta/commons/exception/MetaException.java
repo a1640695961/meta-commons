@@ -13,6 +13,10 @@ public class MetaException extends RuntimeException {
 
     private Object[] args;
 
+    public MetaException(String message) {
+        this.message = message;
+    }
+
     public MetaException(String messageKey, String message) {
         super(message);
         this.messageKey = messageKey;
