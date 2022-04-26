@@ -36,19 +36,31 @@ public class ResultVo<T> {
 
     /**
      * 适用于成功时返回业务数据
+     *
      * @param data
      * @return
      */
-    public static<T> ResultVo<T> success(T data) {
+    public static <T> ResultVo<T> success(T data) {
         return new ResultVo<>(data, SUCCESS_CODE, SUCCESS_MSG, false);
+    }
+
+    public static <T> ResultVo<T> success() {
+        return new ResultVo<>(SUCCESS_CODE, SUCCESS_MSG, false);
     }
 
     /**
      * 适用于发生错误和异常
+     *
      * @param message
      * @return
      */
-    public static<T> ResultVo<T> fail(String message) {
+    public static <T> ResultVo<T> fail(String message) {
         return new ResultVo<>(null, FAILED_CODE, message, true);
+    }
+
+    private ResultVo(int code, String message, boolean result) {
+        this.code = code;
+        this.message = message;
+        this.result = result;
     }
 }

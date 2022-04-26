@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Xiong Mao
  * @date 2022/04/26 19:51
  **/
-public abstract class BaseEntity extends StringId implements IOperation, ITimeEntity {
+public class BaseEntity extends StringId implements IOperation, ITimeEntity {
 
     protected Date createdAt;
 
@@ -20,6 +20,23 @@ public abstract class BaseEntity extends StringId implements IOperation, ITimeEn
     protected String updatedBy;
 
     protected String remark;
+
+    protected boolean isDelete;
+
+    public static BaseEntity deleteMode(String id) {
+        BaseEntity baseEntity = new BaseEntity();
+        baseEntity.setId(id);
+        baseEntity.setDelete(true);
+        return baseEntity;
+    }
+
+    public boolean isDelete() {
+        return isDelete;
+    }
+
+    public void setDelete(boolean delete) {
+        isDelete = delete;
+    }
 
     public String getRemark() {
         return remark;
