@@ -12,6 +12,7 @@
         <meta.version>1.0.0-SNAPSHOT</meta.version>
     </properties>
     <modules>
+        <module>meta-web-start</module>
         <module>meta-dependencies</module>
         <module>meta-commons-lang</module>
         <module>meta-redisson-starter</module>
