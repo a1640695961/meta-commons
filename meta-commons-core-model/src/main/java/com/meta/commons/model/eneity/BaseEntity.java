@@ -6,7 +6,7 @@ import com.meta.commons.model.IOperation;
  * @author Xiong Mao
  * @date 2022/04/26 19:51
  **/
-public abstract class StringIdWithTimeAndOperation extends StringIdWithTime implements IOperation {
+public abstract class BaseEntity extends StringIdWithTime implements IOperation {
 
     private String createdBy;
 
